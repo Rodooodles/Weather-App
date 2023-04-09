@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
-    fetch ('https://weather-app-hfbo.onrender.com/weather?address=' + location).then ((response) => {
+    fetch ('http://weather-app-hfbo.onrender.com/weather?address=' + location).then ((response) => {
     response.json().then((data)=>{
         if (data.error) {
             messageOne.textContent = data.error
